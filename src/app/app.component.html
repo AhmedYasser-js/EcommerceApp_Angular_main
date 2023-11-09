@@ -1,0 +1,12 @@
+<!-- <section [@routing]="prepareRoute(outletRef)" class="content">
+  <router-outlet #outletRef="outlet"></router-outlet>
+  <ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+
+</section> -->
+
+
+<section [@routing]="outletRef.isActivated ?outletRef.activatedRoute:'' " class="content">
+  <router-outlet #outletRef="outlet"></router-outlet>
+  <ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+
+</section>

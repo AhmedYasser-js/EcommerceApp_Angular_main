@@ -1,0 +1,13 @@
+.custom-input {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 15px; /* Adjust this value to control the top margin */
+  margin-bottom: 15px; /* Adjust this value to control the bottom margin */
+}
+
+/* Adjust the width of the input for smaller screens */
+@media (max-width: 576px) {
+  .custom-input {
+    width: 100%;
+  }
+}

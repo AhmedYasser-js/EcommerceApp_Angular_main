@@ -1,0 +1,50 @@
+<section>
+  <div class="row align-items-center g-4">
+    <div class="col-md-3">
+
+      <owl-carousel-o [options]="productSlider">
+
+        <ng-container *ngFor="let path of productDetails.images">
+          <ng-template carouselSlide>
+            <img [src]="path">
+          </ng-template>
+        </ng-container>
+
+      </owl-carousel-o>
+
+
+      <!-- <owl-carousel-o [options]="productSlider">
+        <div class="custom-pagination">
+          <ng-container *ngFor="let image of images; let i = index">
+            <img [src]="image" [class.active]="i === activeIndex" (click)="goTo(i)">
+          </ng-container>
+        </div>
+      </owl-carousel-o> -->
+      <!-- <img [images]="productDetailsImage.images"></img> -->
+      <!-- <img [src]="productDetailsImage.images[activeIndex]" alt="Product Image"> -->
+
+
+
+    </div>
+    <div class="col-md-9">
+      <h3>{{productDetails.title}}</h3>
+      <p>{{productDetails.description}}</p>
+      <p>{{productDetails.price | currency:"EGP"}}</p>
+      <p>{{productDetails.ratingsAverage}}</p>
+      <span><i [class.rating-color]="roundNumber(productDetails.ratingsAverage) >= num" *ngFor="let num of [1,2,3,4,5]"
+          class="fas fa-star "></i>
+        {{productDetails.ratingsAverage}}</span>
+
+      <div class="heart d-flex justify-content-center align-items-center">
+        <i *ngIf="!wishListData.includes($any(productDetails._id))" class="fa-solid fa-heart" role="button"
+          (click)="addToWish(productDetails._id)"></i>
+        <i *ngIf="wishListData.includes($any(productDetails._id))" class="fa-solid fa-heart redColor" role="button"
+          (click)="removFromWishList(productDetails._id)"></i>
+      </div>
+
+      <!-- <img [src]="productDetails.images[1]" alt=""> -->
+      <button class="main-btn w-100" (click)="addProduct(productDetails.id)">+Add To Cart</button>
+    </div>
+  </div>
+</section>
+<!-- addToWish -->

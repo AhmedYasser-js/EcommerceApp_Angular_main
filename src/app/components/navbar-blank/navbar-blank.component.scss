@@ -1,0 +1,44 @@
+$main-color: #0aad0a;
+
+nav {
+  transition: padding 1s;
+}
+
+
+.main-section {
+  padding-top: 80px;
+}
+
+.cart {
+  font-size:25px;
+  font-weight: 800;
+}
+
+
+.badge {
+  background-color: $main-color;
+}
+
+
+.white-badge {
+  background-color: #fff;
+  color: #000; /* You might need to change the text color to make it visible on white background */
+}
+
+
+// ::ng-deep .matBadgeCart{
+//   background-color: $main-color;
+//   }
+::ng-deep .matBadgeCart.mat-badge-content {
+  background-color: rgb(128, 75, 128);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+
+.materialIconsSize {
+  font-weight: 800;
+  font-size: 30px;
+}

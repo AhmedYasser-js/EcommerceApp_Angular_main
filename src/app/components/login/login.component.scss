@@ -1,0 +1,54 @@
+a {
+  text-decoration: none;
+  color:#0aad0a;
+  font-size: 20px;
+  font-weight: 800;
+
+}
+
+
+.eyeIcon {
+right: 50px;
+top: 20px;
+
+}
+
+
+#eyeIcon {
+  font-size: 25px;
+  color:#343434;
+
+}
+
+
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+::ng-deep .mat-form-field {
+  width: 50%;
+}
+
+
+.mat-form-field {
+  width: 100%;
+}
+
+.custom-mat-form-field {
+  width: 100%;
+  color: #0aad0a;
+}
+
+.input_material {
+  background-color: #0aad0a;
+  color: #0aad0a;
+}
+
+.input_material::focus-inner {
+  background-color: #0aad0a;
+  color: #0aad0a;
+}
